@@ -11,19 +11,41 @@
 @implementation StringCheese
 
 - (NSString *) favoriteCheeseStringWithCheese:(NSString *)cheeseName {
-    /* WORK HERE */
-    return nil;
+    
+    NSString *favoriteCheeseStringWithCheese = @"cheddar.";
+    NSLog(@"My favorite cheese is %@",favoriteCheeseStringWithCheese);
+    
+    return favoriteCheeseStringWithCheese;
+
 }
 
 - (NSString *) cheeseNameWithoutCheeseSuffix:(NSString *)cheeseName {
-    /* WORK HERE */
-    return nil;
+    // - (BOOL)hasSuffix:(NSString *) char
+    
+    // 1. see if it ends with " cheese"
+    BOOL doesEndCheese = [cheeseName hasSuffix:@" cheese"];
+
+    // 2. figure out how long the string is and subtract the length of the " cheese" part
+// @property(readonly) NSUInteger length
+    
+    NSUInteger cheeseLength = cheeseName.length - 7;
+    
+    // 3. if it does, get the part of the string before that.
+    if (doesEndCheese) {
+       return  [cheeseName substringToIndex: cheeseLength];
+    } else {
+        return cheeseName;
+    }
 }
 
 - (NSString *) numberOfCheesesStringWithCheeseCount:(NSUInteger)cheeseCount {
     if (cheeseCount == 1) {
         /* WORK HERE, ASSUMING THERE IS 1 CHEESE */
+        
+        return @"";
+        
     } else {
+        
         /* WORK HERE, ASSUMING THERE ARE 2+ CHEESES */
     }
     
