@@ -23,7 +23,6 @@
 }
 
 
-
 - (BOOL) number:(NSNumber *)number1 isTheSameAsNumber:(NSNumber *)number2 {
     BOOL result = [number1 isEqualToNumber: number2];
     
