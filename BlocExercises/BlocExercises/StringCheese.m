@@ -11,11 +11,11 @@
 @implementation StringCheese
 
 - (NSString *) favoriteCheeseStringWithCheese:(NSString *)cheeseName {
-    
-    NSString *favoriteCheeseStringWithCheese = @"cheddar.";
-    NSLog(@"My favorite cheese is %@",favoriteCheeseStringWithCheese);
-    
-    return favoriteCheeseStringWithCheese;
+    NSString *cheeseString = nil;
+
+    cheeseString = [NSString stringWithFormat: @"My favorite cheese is %@.", cheeseName];
+
+    return cheeseString;
 
 }
 
@@ -23,7 +23,18 @@
     // - (BOOL)hasSuffix:(NSString *) char
     
     // 1. see if it ends with " cheese"
+    
+    /*
     BOOL doesEndCheese = [cheeseName hasSuffix:@" cheese"];
+    
+    if (!doesEndCheese){
+        doesEndCheese = [cheeseName hasSuffix:@" Cheese"];
+    }
+    
+     */
+    
+    BOOL doesEndCheese = [cheeseName hasSuffix:@" cheese"] || [cheeseName hasSuffix:@" Cheese"];
+    
 
     // 2. figure out how long the string is and subtract the length of the " cheese" part
 // @property(readonly) NSUInteger length
@@ -39,21 +50,24 @@
 }
 
 - (NSString *) numberOfCheesesStringWithCheeseCount:(NSUInteger)cheeseCount {
+    NSString *cheeseString = nil;
+    
     if (cheeseCount == 1) {
-        /* WORK HERE, ASSUMING THERE IS 1 CHEESE */
-        
-        return @"";
-        
-    } else {
-        
+        cheeseString = [NSString stringWithFormat: @"1 cheese"];
+    } else
+    {
         /* WORK HERE, ASSUMING THERE ARE 2+ CHEESES */
+    
+
+        cheeseString = [NSString stringWithFormat: @"%ld cheeses", cheeseCount];
+        
     }
     
     /*
      (You will learn more about if/else statements in the next checkpoint.)
      */
     
-    return nil;
+    return cheeseString;
 }
 
 @end

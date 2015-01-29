@@ -90,7 +90,6 @@
 		17E46D1D1947638D0018BD4C /* Equality */ = {
 			isa = PBXGroup;
 			children = (
-				931AB0C21945080300B4FB76 /* If / Else Statements and the Ternary Operator */,
 				17E46D1E194763D70018BD4C /* EqualityDeterminer.h */,
 				17E46D1F194763D70018BD4C /* EqualityDeterminer.m */,
 				17E46D21194768C90018BD4C /* EqualityDeterminerTests.m */,
@@ -132,6 +131,7 @@
 				931AB0C81946478E00B4FB76 /* Number Variables */,
 				931AB0CE1946606400B4FB76 /* Strings and String Formatting */,
 				17E46D1D1947638D0018BD4C /* Equality */,
+				931AB0C21945080300B4FB76 /* If / Else Statements and the Ternary Operator */,
 				936964AB1947CE610021C271 /* Loops */,
 				9369649F1947AF7B0021C271 /* Arrays */,
 				936964B31948F7B30021C271 /* Simple Data Types and Objects */,

@@ -10,6 +10,24 @@
 
 @implementation MarysAppleHandler
 
+-(void)example {
+    NSInteger a = 100;
+    NSInteger b = 3;
+    if (a == 5) {
+        NSLog(@"");
+    } else if (a < 1000){
+        
+    } else if (a == b) {
+        
+    } else {
+        
+    }
+
+        
+        
+        }
+
+
 - (NSString *) itemMaryCanPurchaseForDollars:(NSInteger)dollars {
     NSString *itemToReturn;
 
