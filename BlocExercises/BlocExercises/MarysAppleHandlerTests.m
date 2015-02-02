@@ -55,7 +55,6 @@
     NSString *purchasableItem = [self.appleHandler itemMaryCanPurchaseForDollars:1000000000];
     XCTAssertEqualObjects(purchasableItem, @"have The Big Apple", @"If Mary has $1 billion, she should receive an offer to purchase New York City (known as The Big Apple).");
 }
-
 - (void)testThatPriceOfDiscountedVodkaIs18Dollars {
     self.appleHandler.getsDiscount = YES;
     NSUInteger cost = [self.appleHandler dollarCostForAppleFlavoredVodka];
@@ -66,6 +65,5 @@
     NSUInteger cost = [self.appleHandler dollarCostForAppleFlavoredVodka];
     XCTAssertEqual(cost, 24, @"Undiscounted vodka should be $24.");
 }
-
 
 @end

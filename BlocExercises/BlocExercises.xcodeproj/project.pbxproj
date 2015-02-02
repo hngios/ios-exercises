@@ -133,6 +133,7 @@
 				17E46D1D1947638D0018BD4C /* Equality */,
 				931AB0C21945080300B4FB76 /* If / Else Statements and the Ternary Operator */,
 				936964AB1947CE610021C271 /* Loops */,
+				936964A71947C8A50021C271 /* Dictionaries */,
 				9369649F1947AF7B0021C271 /* Arrays */,
 				936964B31948F7B30021C271 /* Simple Data Types and Objects */,
 				936964BB19496EEC0021C271 /* Properties */,
@@ -204,7 +205,6 @@
 		936964AB1947CE610021C271 /* Loops */ = {
 			isa = PBXGroup;
 			children = (
-				936964A71947C8A50021C271 /* Dictionaries */,
 				936964AC1947CEA30021C271 /* AwesomeCounter.h */,
 				936964AD1947CEA30021C271 /* AwesomeCounter.m */,
 				936964AF1947CF820021C271 /* AwesomeCounterTests.m */,
