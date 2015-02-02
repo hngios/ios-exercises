@@ -70,8 +70,9 @@
 }
 
 
-- (NSUInteger) dollarCostForAppleFlavoredVodka_paul {
-    return (self.getsDiscount ? 18 : 24);
+/* - (NSUInteger) dollarCostForAppleFlavoredVodka_paul {
+        return (self.getsDiscount ? 18 : 24);
 }
+*/
 
 @end
