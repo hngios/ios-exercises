@@ -26,7 +26,8 @@
  @param otherNumber
  The number at the other end of the range.
  
- @note Either @c number or @c otherNumber may be the lower number, but the string always includes numbers from lowest to highest.
+ @note Either @c number or @c otherNumber may be the lower number, but the string alwaysneName, modelNumber;
+       includes numbers from lowest to highest.
  
  @return Returns a string of numbers between two numbers, inclusively.
  */
