@@ -12,22 +12,19 @@
 
 - (NSArray *) arrayOfStarTrekCharactersFromString:(NSString *)characterString {
     /* WORK HERE */
-    
-    NSArray *stringOfStarTrekCharacters = @[@"Troi;",
-                                                    @"Riker;",
-                                                    @"Kirk;",
-                                                    @"Janeway;"];
-    
-  //  NSString *firstCharacter = [stringOfStarTrekCharacters objectAtIndex:0];
 
-  // return NSLog(@"The array of characters: %@ %@ %@ %@", stringOfStarTrekCharacters)[0][1][2][3]);
-   
-  //  return @"The returned array was different than expected.";
-  // return @"The returned array was different than expected.";
-
-    return @[];
+    NSArray *arrayOfStarTrekCharacters = @[];
+    
+    // create the array from the string
+    arrayOfStarTrekCharacters = [characterString componentsSeparatedByString:@";"];
+    
+    /*
+    
+    NSLog(@"The array of characters: %@ %@ %@ %@", arrayOfStarTrekCharacters[0], arrayOfStarTrekCharacters[1], arrayOfStarTrekCharacters[2], arrayOfStarTrekCharacters[3]);
+    */
+    
+    return arrayOfStarTrekCharacters;
 }
-
 
 - (NSString *) stringOfStarTrekCharactersFromArray:(NSArray *)characterArray {
    
@@ -43,91 +40,69 @@
             resultString = ([resultString stringByAppendingString:@";"]);
         }
         
-        
-        
     }
     
-    //resultString = ([resultString stringByAppendingString:characterArray[0]]);
-    //(NSString *)stringByAppendingString:(NSString *)aString
+    // resultString = ([resultString stringByAppendingString:characterArray[0]]);
     
-   // resultString = ([resultString stringByAppendingString:@";"]);
-  //  resultString = ([resultString stringByAppendingString:@";"]);
+    // (NSString *)stringByAppendingString:(NSString *)aString
+    // resultString = ([resultString stringByAppendingString:@";"]);
+    // resultString = ([resultString stringByAppendingString:@";"]);
 
-    
-    
     return resultString;
-    
-    
-    
-    /*
-    NSMutableArray *stringOfStarTrekCharacters = [[NSMutableArray alloc] init];
 
-    [stringOfStarTrekCharacters addObject: @"McCoy;"];
-    [stringOfStarTrekCharacters addObject: @"Tuvok;"];
     
-    NSLog(@"The array of added characters: %@, %@", stringOfStarTrekCharacters[4],stringOfStarTrekCharacters[5]);
-          
-    return @"The returned array was different than expected.";
-    return @"The returned string was different than expected.";
-     */
+ /*   NSMutableArray *arrayOfStarTrekCharacters = [[NSMutableArray alloc] init];
+
+    [arrayOfStarTrekCharacters insertObject: @"McCoy;" atIndex:4];
+    [arrayOfStarTrekCharacters insertObject: @"Tuvok;" atIndex:5];
     
+    NSLog(@"The array of added characters: %@, %@", [arrayOfStarTrekCharacters objectAtIndex:4,arrayOfStarTrekCharacters objectAtIndex:5]);
+
+    return arrayOfStarTrekCharacters;
+  */
 }
 
 
 - (NSArray *) alphabeticallySortedStarTrekCharactersFromArray:(NSArray *)characterArray {
-    /* WORK HERE */
-
-
     
-//    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:nil ascending:YES selector:@selector(localizedCase][stringOfStarTrekCharacters sortUsingDescriptors:@[sortDescriptor]];
+    NSArray *resultArray = @[];
     
-                                                                                         
-                                                                                                                  
-                                                                                                                  
-                                                                                                                  
-                                                                                                                  
-                                                                                                                  
-    return @[];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:nil ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)];
+    
+/// Sort here
+    resultArray = [characterArray sortedArrayUsingDescriptors:@[sortDescriptor]];
+    
+// NSLog(@"Sorted Array Object 0: %@", resultArray[0]);
+    return resultArray;
 }
 
 
 - (BOOL) characterArrayContainsWorf:(NSArray *)characterArray {
-    /* WORK HERE */
+    
+    BOOL resultBOOL = NO;
+    
+    NSString *alphabeticallySortedStarTrekCharactersFromArray = @" ";
+    
+    NSString *name = @"Worf";
     
     
+    // Start loop here -- use a for in loop on characterArray (nsstring)
     
+
+    NSRange match = [alphabeticallySortedStarTrekCharactersFromArray  rangeOfString:name];
     
+    if (match.location == NSNotFound){
+        NSLog(@"No match found!");
+        // We don't need to change resultBOOL because it is already set to NO.
+    }   else {
+        NSLog(@"Match found!");
+        resultBOOL = YES;
+    }
     
+    // end loop here
     
-    
-    
-    
-    
-    
-    
-    
-    
-    return NO;
+    return resultBOOL;
 }
 
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
