@@ -81,26 +81,26 @@
     
     BOOL resultBOOL = NO;
     
-    NSString *alphabeticallySortedStarTrekCharactersFromArray = @" ";
-    
-    NSString *name = @"Worf";
+    NSString *nameWorf = @"Worf";
     
     
     // Start loop here -- use a for in loop on characterArray (nsstring)
     
-
-    NSRange match = [alphabeticallySortedStarTrekCharactersFromArray  rangeOfString:name];
+    // (element in collection), then statement
     
-    if (match.location == NSNotFound){
-        NSLog(@"No match found!");
-        // We don't need to change resultBOOL because it is already set to NO.
-    }   else {
-        NSLog(@"Match found!");
-        resultBOOL = YES;
+    for (NSString *name in characterArray){
+        NSLog(@"%@ is part of the array of Star Trek Characters", name);
+    
+        NSRange match =[name rangeOfString:nameWorf];
+        
+        if (match.location == NSNotFound){
+            NSLog(@"No match found!");
+            // We don't need to change resultBOOL because it is already set to NO.
+        }   else {
+            NSLog(@"Match found!");
+            resultBOOL = YES;
+        }
     }
-    
-    // end loop here
-    
     return resultBOOL;
 }
 
