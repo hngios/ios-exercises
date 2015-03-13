@@ -12,42 +12,50 @@
 
 - (NSString *)favoriteDrinkForStarTrekCharacterDictionary:(NSDictionary *)characterDictionary {
 
-/*
-//    NSString *favoriteDrinkForStarTrekCharacter = [NSString *characterDictionary];
-  //  NSDictionary *character
+    //NSString *resultNSString = nil;
+   
+    NSString *resultNSString = nil;
     
-    [dict enumerateKeyAndObjectsUsingBlock: ^(id favoriteDrinkForStarTrekCharacter, id characterDictionary, BOOL *stop) {
-        NSLog("%@ is %@ favorite drink", favoriteDrinkForStarTrekCharacter, characterDictionary);
-    }];
+    resultNSString = characterDictionary[@"favorite drink"];
+    
+    return resultNSString;
+ 
 
 }
 
 - (NSArray *)arrayOfFavoriteDrinksForStarTrekCharacters:(NSArray *)charactersArray {
-    /* WORK HERE */
-    /*
+   
+    NSArray *resultNSArray = @[];
     
-    for (NSString *favoriteDrinkForStarTrekCharacter in allKeys) {
-        id characterDictionary = [NSDictionary objectForKey: favoriteDrinkForStarTrekCharacter];
-        //do your thing with the object
-    }
+    /* 
+     // for each character
      */
+    for (NSDictionary *characterDictionary in charactersArray) {
+            // look up their favorite drink
+        NSString *favoriteDrink = [self favoriteDrinkForStarTrekCharacterDictionary: characterDictionary];
     
-    return @[];
+            // add it to the result array
+        resultNSArray = [resultNSArray arrayByAddingObject: favoriteDrink];
+    
+     }
+   
+    return resultNSArray;
+    
 }
 
 - (NSDictionary *)dictionaryWithQuoteAddedToStarTrekCharacterDictionary:(NSDictionary *)characterDictionary {
-    /* WORK HERE */
     
+    NSMutableDictionary *resultNSDictionary = [characterDictionary mutableCopy];
     
+    resultNSDictionary[@"quote"] = @"Added quote to Star Trek Character Dictionary";
     
-    return @{};
+   // resultNSDictionary = characterDictionary @{};
+    
+    return resultNSDictionary;
+    
 }
 
 @end
 
 
-// [favoriteDrinkForStarTrekCharacter setObject:%@ forKey:@" %@"];
-// (favoriteDrinkForStarTrekCharacter => characterDicitonary).
 
-
-// NSDictionary *favoriteDrinkForStarTrekCharacter = @{ @" %@" : @[],
